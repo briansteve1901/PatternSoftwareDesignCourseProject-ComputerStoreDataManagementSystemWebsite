@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CompStoreModelStoreContainer" CdmEntityContainer="CompStoreEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CompStoreModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="NamaCustomer" ColumnName="NamaCustomer" />
+          <ScalarProperty Name="AlamatCustomer" ColumnName="AlamatCustomer" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expedisis">
+      <EntityTypeMapping TypeName="CompStoreModel.Expedisi">
+        <MappingFragment StoreEntitySet="Expedisi">
+          <ScalarProperty Name="IDExpedisi" ColumnName="IDExpedisi" />
+          <ScalarProperty Name="NamaExpedisi" ColumnName="NamaExpedisi" />
+          <ScalarProperty Name="NamaKurir" ColumnName="NamaKurir" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PembelianBarangs">
+      <EntityTypeMapping TypeName="CompStoreModel.PembelianBarang">
+        <MappingFragment StoreEntitySet="PembelianBarang">
+          <ScalarProperty Name="IDPembelian" ColumnName="IDPembelian" />
+          <ScalarProperty Name="IDproduk" ColumnName="IDproduk" />
+          <ScalarProperty Name="JumlahBarang" ColumnName="JumlahBarang" />
+          <ScalarProperty Name="HargaProduk" ColumnName="HargaProduk" />
+          <ScalarProperty Name="TanggalPembelian" ColumnName="TanggalPembelian" />
+          <ScalarProperty Name="JenisPembayaran" ColumnName="JenisPembayaran" />
+          <ScalarProperty Name="IDSupplier" ColumnName="IDSupplier" />
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="IDExpedisi" ColumnName="IDExpedisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PenjualanBarangs">
+      <EntityTypeMapping TypeName="CompStoreModel.PenjualanBarang">
+        <MappingFragment StoreEntitySet="PenjualanBarang">
+          <ScalarProperty Name="IDPenjualan" ColumnName="IDPenjualan" />
+          <ScalarProperty Name="IDproduk" ColumnName="IDproduk" />
+          <ScalarProperty Name="JumlahBarang" ColumnName="JumlahBarang" />
+          <ScalarProperty Name="HargaProduk" ColumnName="HargaProduk" />
+          <ScalarProperty Name="TanggalPembelian" ColumnName="TanggalPembelian" />
+          <ScalarProperty Name="JenisPembayaran" ColumnName="JenisPembayaran" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="IDExpedisi" ColumnName="IDExpedisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produks">
+      <EntityTypeMapping TypeName="CompStoreModel.Produk">
+        <MappingFragment StoreEntitySet="Produk">
+          <ScalarProperty Name="IDProduk" ColumnName="IDProduk" />
+          <ScalarProperty Name="NamaProduk" ColumnName="NamaProduk" />
+          <ScalarProperty Name="KategoriProduk" ColumnName="KategoriProduk" />
+          <ScalarProperty Name="MerkProduk" ColumnName="MerkProduk" />
+          <ScalarProperty Name="StockProduk" ColumnName="StockProduk" />
+          <ScalarProperty Name="HargaProduk" ColumnName="HargaProduk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="CompStoreModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="NamaStaff" ColumnName="NamaStaff" />
+          <ScalarProperty Name="AlamatStaff" ColumnName="AlamatStaff" />
+          <ScalarProperty Name="JabatanStaff" ColumnName="JabatanStaff" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="CompStoreModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="IDSupplier" ColumnName="IDSupplier" />
+          <ScalarProperty Name="NamaSupplier" ColumnName="NamaSupplier" />
+          <ScalarProperty Name="AlamatSupplier" ColumnName="AlamatSupplier" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
