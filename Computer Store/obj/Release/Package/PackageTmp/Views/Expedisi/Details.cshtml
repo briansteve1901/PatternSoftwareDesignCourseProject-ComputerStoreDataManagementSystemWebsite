@@ -1,0 +1,42 @@
+﻿@model Computer_Store.Models.Expedisi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Expedisi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaExpedisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaExpedisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaKurir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaKurir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telepon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telepon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDExpedisi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

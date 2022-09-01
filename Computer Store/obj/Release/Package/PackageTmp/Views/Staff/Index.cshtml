@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Computer_Store.Models.Staff>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NamaStaff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlamatStaff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JabatanStaff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telepon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamaStaff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlamatStaff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JabatanStaff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telepon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDStaff }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDStaff }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDStaff })
+        </td>
+    </tr>
+}
+
+</table>

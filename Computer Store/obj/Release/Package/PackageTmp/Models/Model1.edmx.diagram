@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e042fdee84344b6a5ec83136d7a2191" Name="Diagram1">
+        <EntityTypeShape EntityType="CompStoreModel.Customer" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.Expedisi" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.PembelianBarang" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.PenjualanBarang" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.Produk" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.Staff" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompStoreModel.Supplier" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <AssociationConnector Association="CompStoreModel.FK__Penjualan__IDCus__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Pembelian__IDExp__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Penjualan__IDExp__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Pembelian__IDpro__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Pembelian__IDSta__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Pembelian__IDSup__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Penjualan__IDpro__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CompStoreModel.FK__Penjualan__IDSta__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Computer_Store.Models.PenjualanBarang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JumlahBarang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HargaProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TanggalPembelian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JenisPembayaran)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.NamaCustomer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expedisi.NamaExpedisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produk.NamaProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.NamaStaff)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JumlahBarang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HargaProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TanggalPembelian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JenisPembayaran)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.NamaCustomer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expedisi.NamaExpedisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produk.NamaProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.NamaStaff)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDPenjualan }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDPenjualan }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDPenjualan })
+        </td>
+    </tr>
+}
+
+</table>

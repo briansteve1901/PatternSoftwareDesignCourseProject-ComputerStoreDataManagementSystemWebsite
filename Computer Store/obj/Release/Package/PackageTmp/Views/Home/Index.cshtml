@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Font Poppins Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Aos Js -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Isi start -->
+<div class="wrapper">
+    <div class="wrapper-one">
+        <h1 id="wrapper-one-heading">Computer Store Management System</h1>
+        <p id="wrapper-one-text">
+            Computer Store Management System merupakan sebuah sistem manajemen data berbasis web pada toko komputer.
+        </p>
+    </div>
+
+    <div class="wrapper-two mt-5">
+        <div class="wrapper-two-computer-image-one mt-5">
+            <img src="~/images/ManagementSystem.jpg" alt="Image Not Loaded">
+        </div>
+    </div>
+
+</div>
+<!-- Isi End -->
+<!-- Layanan Start -->
+<section id="layanan">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Keunggulan Sistem</h2>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4 gx-4 gy-4 text-center">
+
+            <div class="col-md-4 text-center">
+                <div class="card-layanan" data-aos="fade-up" data-aos-duration="2000">
+                    <img class="mt-4" src="~/images/clock.png" alt="">
+                    <H5>Efesiensi Waktu</H5>
+                    <p>Sistem manajemen ini memungkinkan kamu untuk melakukan pendataan secara cepat dan tepat dimanapun dan kapanpun! </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <div class="card-layanan" data-aos="fade-up" data-aos-duration="2000">
+
+                    <img class="mt-4" src="~/images/device.png" alt="">
+
+                    <H5>Pendataan Fleksibel</H5>
+                    <p>Kamu dapat melakukan pendataan segala data toko kamu melalui semua jenis perangkat dan dapat diakses dengan web browser apapun.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center justify-content-center">
+                <div class="card-layanan" data-aos="fade-up" data-aos-duration="2000">
+                    <img class="mt-4" src="~/images/easy-to-use.png" alt="">
+                    <H5>Sistem Mudah Digunakan</H5>
+                    <p>Sistem ini memiliki menu navigasi yang mudah dipahami, kemudian data yang diinput akan segera tersimpan pada database.</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Layanan End -->
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>  

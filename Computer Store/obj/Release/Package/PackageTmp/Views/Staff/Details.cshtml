@@ -1,0 +1,50 @@
+﻿@model Computer_Store.Models.Staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaStaff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlamatStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlamatStaff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JabatanStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JabatanStaff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telepon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telepon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDStaff }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
