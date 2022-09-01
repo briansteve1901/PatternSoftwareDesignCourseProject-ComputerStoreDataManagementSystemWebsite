@@ -20,7 +20,7 @@ Project Creators:
 
 Project GitHub Link: https://bit.ly/3pWyIgu
 
-Project Documentation Link: https://bit.ly/3pFqfya
+Project Documentation Link: https://bit.ly/3Q0V1MA
 
 If you have any questions, suggestions, or comments related to this project, you can contact me through my email: 
 brians1901@gmail.com. Thank you for visiting and seeing this project!
