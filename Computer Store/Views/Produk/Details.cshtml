@@ -1,0 +1,58 @@
+﻿@model Computer_Store.Models.Produk
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produk</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerkProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerkProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HargaProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HargaProduk)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDProduk }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

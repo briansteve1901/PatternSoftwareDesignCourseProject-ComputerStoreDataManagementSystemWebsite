@@ -1,0 +1,82 @@
+﻿@model Computer_Store.Models.PembelianBarang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PembelianBarang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JumlahBarang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JumlahBarang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HargaProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HargaProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TanggalPembelian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TanggalPembelian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisPembayaran)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JenisPembayaran)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expedisi.NamaExpedisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expedisi.NamaExpedisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produk.NamaProduk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produk.NamaProduk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff.NamaStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Staff.NamaStaff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier.NamaSupplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier.NamaSupplier)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPembelian }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Computer_Store.Models.Produk>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NamaProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KategoriProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MerkProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockProduk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HargaProduk)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamaProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KategoriProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MerkProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockProduk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HargaProduk)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDProduk }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDProduk }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDProduk })
+        </td>
+    </tr>
+}
+
+</table>
