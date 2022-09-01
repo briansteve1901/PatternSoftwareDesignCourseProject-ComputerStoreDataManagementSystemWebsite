@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CompStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="IDCustomer" />
+    </Key>
+    <Property Name="IDCustomer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaCustomer" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AlamatCustomer" Type="varchar" MaxLength="30" />
+    <Property Name="Telepon" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Expedisi">
+    <Key>
+      <PropertyRef Name="IDExpedisi" />
+    </Key>
+    <Property Name="IDExpedisi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaExpedisi" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NamaKurir" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Telepon" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PembelianBarang">
+    <Key>
+      <PropertyRef Name="IDPembelian" />
+    </Key>
+    <Property Name="IDPembelian" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDproduk" Type="int" Nullable="false" />
+    <Property Name="JumlahBarang" Type="int" Nullable="false" />
+    <Property Name="HargaProduk" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TanggalPembelian" Type="date" Nullable="false" />
+    <Property Name="JenisPembayaran" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IDSupplier" Type="int" Nullable="false" />
+    <Property Name="IDStaff" Type="int" Nullable="false" />
+    <Property Name="IDExpedisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PenjualanBarang">
+    <Key>
+      <PropertyRef Name="IDPenjualan" />
+    </Key>
+    <Property Name="IDPenjualan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDproduk" Type="int" Nullable="false" />
+    <Property Name="JumlahBarang" Type="int" Nullable="false" />
+    <Property Name="HargaProduk" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TanggalPembelian" Type="date" Nullable="false" />
+    <Property Name="JenisPembayaran" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IDCustomer" Type="int" Nullable="false" />
+    <Property Name="IDStaff" Type="int" Nullable="false" />
+    <Property Name="IDExpedisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produk">
+    <Key>
+      <PropertyRef Name="IDProduk" />
+    </Key>
+    <Property Name="IDProduk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaProduk" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="KategoriProduk" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MerkProduk" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="StockProduk" Type="int" Nullable="false" />
+    <Property Name="HargaProduk" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="IDStaff" />
+    </Key>
+    <Property Name="IDStaff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaStaff" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AlamatStaff" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="JabatanStaff" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Telepon" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="IDSupplier" />
+    </Key>
+    <Property Name="IDSupplier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaSupplier" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AlamatSupplier" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Telepon" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Pembelian__IDExp__31EC6D26">
+    <End Role="Expedisi" Type="Self.Expedisi" Multiplicity="1" />
+    <End Role="PembelianBarang" Type="Self.PembelianBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expedisi">
+        <PropertyRef Name="IDExpedisi" />
+      </Principal>
+      <Dependent Role="PembelianBarang">
+        <PropertyRef Name="IDExpedisi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pembelian__IDpro__32E0915F">
+    <End Role="Produk" Type="Self.Produk" Multiplicity="1" />
+    <End Role="PembelianBarang" Type="Self.PembelianBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produk">
+        <PropertyRef Name="IDProduk" />
+      </Principal>
+      <Dependent Role="PembelianBarang">
+        <PropertyRef Name="IDproduk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pembelian__IDSta__34C8D9D1">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="PembelianBarang" Type="Self.PembelianBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="IDStaff" />
+      </Principal>
+      <Dependent Role="PembelianBarang">
+        <PropertyRef Name="IDStaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pembelian__IDSup__33D4B598">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="PembelianBarang" Type="Self.PembelianBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="IDSupplier" />
+      </Principal>
+      <Dependent Role="PembelianBarang">
+        <PropertyRef Name="IDSupplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penjualan__IDCus__398D8EEE">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="PenjualanBarang" Type="Self.PenjualanBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="IDCustomer" />
+      </Principal>
+      <Dependent Role="PenjualanBarang">
+        <PropertyRef Name="IDCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penjualan__IDExp__37A5467C">
+    <End Role="Expedisi" Type="Self.Expedisi" Multiplicity="1" />
+    <End Role="PenjualanBarang" Type="Self.PenjualanBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expedisi">
+        <PropertyRef Name="IDExpedisi" />
+      </Principal>
+      <Dependent Role="PenjualanBarang">
+        <PropertyRef Name="IDExpedisi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penjualan__IDpro__38996AB5">
+    <End Role="Produk" Type="Self.Produk" Multiplicity="1" />
+    <End Role="PenjualanBarang" Type="Self.PenjualanBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produk">
+        <PropertyRef Name="IDProduk" />
+      </Principal>
+      <Dependent Role="PenjualanBarang">
+        <PropertyRef Name="IDproduk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Penjualan__IDSta__3A81B327">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="PenjualanBarang" Type="Self.PenjualanBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="IDStaff" />
+      </Principal>
+      <Dependent Role="PenjualanBarang">
+        <PropertyRef Name="IDStaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CompStoreModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expedisi" EntityType="Self.Expedisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PembelianBarang" EntityType="Self.PembelianBarang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PenjualanBarang" EntityType="Self.PenjualanBarang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produk" EntityType="Self.Produk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Pembelian__IDExp__31EC6D26" Association="Self.FK__Pembelian__IDExp__31EC6D26">
+      <End Role="Expedisi" EntitySet="Expedisi" />
+      <End Role="PembelianBarang" EntitySet="PembelianBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pembelian__IDpro__32E0915F" Association="Self.FK__Pembelian__IDpro__32E0915F">
+      <End Role="Produk" EntitySet="Produk" />
+      <End Role="PembelianBarang" EntitySet="PembelianBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pembelian__IDSta__34C8D9D1" Association="Self.FK__Pembelian__IDSta__34C8D9D1">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="PembelianBarang" EntitySet="PembelianBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pembelian__IDSup__33D4B598" Association="Self.FK__Pembelian__IDSup__33D4B598">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="PembelianBarang" EntitySet="PembelianBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penjualan__IDCus__398D8EEE" Association="Self.FK__Penjualan__IDCus__398D8EEE">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="PenjualanBarang" EntitySet="PenjualanBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penjualan__IDExp__37A5467C" Association="Self.FK__Penjualan__IDExp__37A5467C">
+      <End Role="Expedisi" EntitySet="Expedisi" />
+      <End Role="PenjualanBarang" EntitySet="PenjualanBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penjualan__IDpro__38996AB5" Association="Self.FK__Penjualan__IDpro__38996AB5">
+      <End Role="Produk" EntitySet="Produk" />
+      <End Role="PenjualanBarang" EntitySet="PenjualanBarang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Penjualan__IDSta__3A81B327" Association="Self.FK__Penjualan__IDSta__3A81B327">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="PenjualanBarang" EntitySet="PenjualanBarang" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
