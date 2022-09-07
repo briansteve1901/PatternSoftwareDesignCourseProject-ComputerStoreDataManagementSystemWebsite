@@ -3,7 +3,7 @@ Computer Store Data Management System Website is a web-based data management sys
 This system has the Create Feature, Read Feature, Update Feature, and Delete Feature for data such as product, 
 customer, supplier, staff, goods purchases, sales of goods, and payment types. We did this project to help people 
 to manage their computer store data. In this project, we faced a little difficulty in implying Domain Driven Design 
-Concept to this project. As a result, we read documentations. It was an honor to know that we have successfully 
+Concept to this project. As a result, we read documentation. It was an honor to know that we have successfully 
 created this project and scored a perfect one, 100 out of 100 for this project.  
 
 Code Editor: Visual Studio and SQL Server Management Studio
